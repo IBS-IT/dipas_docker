@@ -53,6 +53,4 @@ volumes:
 
 networks:
   dipas-network:
-  traefik-network:
-    external: true
 
