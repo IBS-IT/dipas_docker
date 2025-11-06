@@ -20,7 +20,7 @@ RUN echo "zend_extension=opcache.so" > /usr/local/etc/php/conf.d/docker-php-ext-
     && echo "opcache.enable_cli=1" >> /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
 
 # Copy and extract project files
-RUN wget -O /var/www/html/dipas.zip https://bitbucket.org/geowerkstatt-hamburg/dipas/downloads/dipas-os-3.3.2.zip \
+RUN wget -O /var/www/html/dipas.zip https://bitbucket.org/geowerkstatt-hamburg/dipas/downloads/dipas-os-4.0.10.zip \
     && unzip /var/www/html/dipas.zip -d /var/www/html/dipas/ \
     && rm -rf /var/www/html/dipas.zip
 
