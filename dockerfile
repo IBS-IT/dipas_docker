@@ -27,6 +27,7 @@ RUN wget -O /var/www/html/dipas.zip https://bitbucket.org/geowerkstatt-hamburg/d
 # Copy configuration files
 COPY ./config/drupal/settings.php /var/www/html/dipas/htdocs/drupal/sites/default/settings.php
 COPY ./config/drupal/drupal.services.yml /var/www/html/dipas/config/drupal.services.yml
+COPY ./config/drupal/drupal.reverse-proxy-settings.php /var/www/html/dipas/config/drupal.reverse-proxy-settings.php
 
 # Copy and set entrypoint script
 COPY ./entrypoint.sh /entrypoint.sh

@@ -32,6 +32,7 @@ if [ -f "$MARKER" ]; then
         && chmod 444 /var/www/html/dipas/htdocs/drupal/.htaccess \
         && chmod 644 /var/www/html/dipas/htdocs/drupal/sites/default/settings.php \
         && chmod 644 /var/www/html/dipas/config/drupal.services.yml \
+        && chmod 644 /var/www/html/dipas/config/drupal.reverse-proxy-settings.php \
         && chmod -R 755 /var/www/html/dipas/htdocs/drupal/sites/default/files
 
     echo "DIPAS setup is ready!"
@@ -58,6 +59,7 @@ if PGPASSWORD="${DB_PASSWORD}" psql -h "${DB_HOST}" -U "${DB_USER}" -d "${DB_NAM
         && chmod 444 /var/www/html/dipas/htdocs/drupal/.htaccess \
         && chmod 644 /var/www/html/dipas/htdocs/drupal/sites/default/settings.php \
         && chmod 644 /var/www/html/dipas/config/drupal.services.yml \
+        && chmod 644 /var/www/html/dipas/config/drupal.reverse-proxy-settings.php \
         && chmod -R 755 /var/www/html/dipas/htdocs/drupal/sites/default/files
 
     # Marker setzen, damit künftige Starts die DB gar nicht mehr anfassen
@@ -82,6 +84,7 @@ else
         && chmod 444 /var/www/html/dipas/htdocs/drupal/.htaccess \
         && chmod 644 /var/www/html/dipas/htdocs/drupal/sites/default/settings.php \
         && chmod 644 /var/www/html/dipas/config/drupal.services.yml \
+        && chmod 644 /var/www/html/dipas/config/drupal.reverse-proxy-settings.php \
         && chmod -R 755 /var/www/html/dipas/htdocs/drupal/sites/default/files
 
     # Run Drush installation and other necessary commands
