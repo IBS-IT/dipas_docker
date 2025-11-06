@@ -93,6 +93,9 @@ else
     --account-name=${DRUPAL_ADMIN_USER} --account-pass=${DRUPAL_ADMIN_PASS} \
     --site-name='${DRUPAL_SITE_NAME}' --yes --existing-config"
 
+    # Enable locale module before importing translations
+    su www-data -s /bin/bash -c "vendor/bin/drush pm-enable locale -y"
+
     # Import translation files
     su www-data -s /bin/bash -c "vendor/bin/drush locale:import de /var/www/html/dipas/config/de.po --type=not-customized"
     su www-data -s /bin/bash -c "vendor/bin/drush locale:import de /var/www/html/dipas/htdocs/drupal/modules/custom/dipas_stories/files/translations/dipas_stories.de.po --type=not-customized"
